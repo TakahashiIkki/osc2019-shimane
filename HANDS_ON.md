@@ -25,4 +25,4 @@ cd osc2019-shimane
 
 ## １． Dodkerで PostgreSQL を立ち上げてみよう
 
-[コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/1_docker_start.md)
+[コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/1.md)

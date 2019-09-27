@@ -9,20 +9,8 @@
 
 ## ０．前準備
 
-### git, docker をインストール
+[0: 前準備 コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/0.md)
 
-### この git レポジトリのCloneをする。
+## １． Dockerで PostgreSQL を立ち上げてみよう
 
-- terminal を立ち上げましょう。
-
-```
-cd ~
-git clone https://github.com/TakahashiIkki/osc2019-shimane.git
-cd osc2019-shimane
-```
-
-これで前準備 は終了です！
-
-## １． Dodkerで PostgreSQL を立ち上げてみよう
-
-[コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/1.md)
+[1: Dockerで PostgreSQL を立ち上げてみよう コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/1.md)

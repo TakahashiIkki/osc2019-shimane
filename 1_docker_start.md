@@ -1,0 +1,101 @@
+# １． DockerでPostgreSQLを立ち上げてみよう。
+
+docker のコマンドを実行して PostgreSQLを起動してみましょう！！
+
+```
+docker-compose up --build -d
+```
+
+成功すると 以下のようなメッセージが表示されます。
+
+**Successfully tagged osc2019-shimane_postgres:latest**
+**Creating osc_pgsql ... done**
+
+--- 
+
+※ docker, docker-compose が Vagrant と何が違うの？ みたいな方はこちらをぜひともご参照ください！
+
+https://speakerdeck.com/soudai/vagrant-to-docker
+
+--- 
+
+dockerのコンテナが動いてる事を確認してみましょう！
+
+```
+docker-compose ps -a
+```
+
+**実行結果**
+
+正常に動いていれば 以下のような表示がされます。
+
+```
+  Name                 Command              State           Ports         
+--------------------------------------------------------------------------
+osc_pgsql   docker-entrypoint.sh postgres   Up      0.0.0.0:5434->5432/tcp
+```
+
+## Dockerコンテナの中に入って操作をしてみよう
+
+それでは、 Dockerで起動しているコンテナの中に入って確認してみましょう！
+
+以下のコマンドを入力してみてください。
+
+```
+docker-compose exec postgres bash
+```
+
+**実行結果**
+
+正常に動いていれば 以下のような表示がされます。
+
+```
+root@58da2a0c083e:/opt/postgres# 
+```
+
+## 初期に登録されているデータベースを確認する。
+
+では、コンテナの中のPostgreSQLにログインしてみましょう。  
+以下を Dockerコンテナ上で入力してみてください。
+
+```
+psql -h localhost -U osc_user osc_demo
+```
+
+**実行結果**
+
+成功すると 以下のような表示がされます。
+
+```
+root@58da2a0c083e:/opt/postgres# psql -h localhost -U osc_user osc_demo
+
+psql (11.5 (Debian 11.5-1.pgdg90+1))
+Type "help" for help.
+
+osc_demo=#
+```
+
+`osc_demo=#` という表示がされている場合は 　
+**今、 osc_demo というデータベースにログインしています** という状態となります。
+
+それでは、データベースの一覧を出力してみましょう。
+
+```
+osc_demo=# \list
+```
+
+**実行結果**
+
+```
+osc_demo=# \list
+                             List of databases
+   Name    |  Owner   | Encoding | Collate | Ctype |   Access privileges   
+-----------+----------+----------+---------+-------+-----------------------
+ osc_demo  | osc_user | UTF8     | C       | C     | 
+ postgres  | osc_user | UTF8     | C       | C     | 
+ template0 | osc_user | UTF8     | C       | C     | =c/osc_user          +
+           |          |          |         |       | osc_user=CTc/osc_user
+ template1 | osc_user | UTF8     | C       | C     | =c/osc_user          +
+           |          |          |         |       | osc_user=CTc/osc_user
+(4 rows)
+```

@@ -1,5 +1,5 @@
 *
-tmp/*
-!pg.dump
+!tmp/*
+!tmp/pg.dump
 !Dockerfile
 !.gitignore

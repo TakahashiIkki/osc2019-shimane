@@ -21,4 +21,4 @@
 - テーブルにインデックスを貼ってSQLの高速化をしてみよう。
 - Explainを使って何がどう変わったのか、みてみよう。
 
-[作業手順書]](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/HANDS_ON.md)
+[作業手順書](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/HANDS_ON.md)

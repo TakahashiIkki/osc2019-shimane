@@ -14,3 +14,7 @@
 ## １． Dockerで PostgreSQL を立ち上げてみよう
 
 [1: Dockerで PostgreSQL を立ち上げてみよう コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/1.md)
+
+## ２． PostgreSQLにdumpファイルをリストアしてみよう。
+
+[2: PostgreSQLにdumpファイルをリストアしてみよう。 コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/2.md)

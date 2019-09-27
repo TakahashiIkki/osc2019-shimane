@@ -18,3 +18,7 @@
 ## ２． PostgreSQLにdumpファイルをリストアしてみよう。
 
 [2: PostgreSQLにdumpファイルをリストアしてみよう。 コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/2.md)
+
+## ３． テーブルにインデックスを貼ってSQLの高速化をしてみよう。
+
+[3: テーブルにインデックスを貼ってSQLの高速化をしてみよう。 コマンド集](https://github.com/TakahashiIkki/osc2019-shimane/blob/master/command/3.md)

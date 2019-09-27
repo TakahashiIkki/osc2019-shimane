@@ -1,5 +1,5 @@
-*
-!tmp/*
+data
+work
 !tmp/pg.dump
 !Dockerfile
 !.gitignore
